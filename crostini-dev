@@ -28,7 +28,7 @@ sudo apt install powershell -y
 
 # Chrome
 curl -L https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb > ~/Downloads/chrome.deb
-sudo apt install ~/Downloads/chrome.deb
+sudo apt install ~/Downloads/chrome.deb -y
 
 #Webex Teams
 mkdir -p ~/.local/share
