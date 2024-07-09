@@ -1,5 +1,5 @@
 #!/bin/bash
-#bash <(curl -s https://raw.githubusercontent.com/crosfan/crostini/master/penguin_bootstrap_min.sh)
+#bash <(curl -s https://raw.githubusercontent.com/jeffwilson515/penguin/main/crostini-dev)
 
 #Downloads where we put stuff
 cd ~
