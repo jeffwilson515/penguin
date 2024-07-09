@@ -1,43 +1,56 @@
 #!/bin/bash
 # bash <(curl -s https://raw.githubusercontent.com/jeffwilson515/penguin/main/crostini-dev)
 
-#Downloads where we put stuff
+# Downloads where we put stuff
 cd ~
 mkdir -p ~/Downloads
 cd ~/Downloads
 
-#Basic utilities
+# Basic utilities
 sudo apt install iputils-ping -y
 sudo apt install traceroute -y
 sudo apt install dnsutils -y
 sudo apt install apt-file -y
-# sudo apt install fuse -y
-# sudo apt install xz-utils -y
-# sudo apt install gnupg2 -y
+# following needed for sql server
+sudo apt install gnupg2 -y
+sudo apt install apt-transport-https -y
 
-#VS Code
+# Gnome Keyring
+sudo apt install gnome-keyring -y
+
+# VS Code
 curl -L https://go.microsoft.com/fwlink/?LinkID=760868 > ~/Downloads/vscode.deb
 sudo apt install ~/Downloads/vscode.deb -y
+curl -L https://raw.githubusercontent.com/jeffwilson515/penguin/main/argv.json > ~/.vscode/argv.json
 
-#PowerShell
-source /etc/os-release
-curl -L https://packages.microsoft.com/config/debian/$VERSION_ID/packages-microsoft-prod.deb > ~/Downloads/packages-microsoft-prod.deb
-sudo dpkg -i ~/Downloads/packages-microsoft-prod.deb
-rm ~/Downloads/packages-microsoft-prod.deb
-sudo apt install powershell -y
+# PowerShell (not working)
+# source /etc/os-release
+# wget -q https://packages.microsoft.com/config/debian/$VERSION_ID/packages-microsoft-prod.deb
+# sudo dpkg -i packages-microsoft-prod.deb
+# rm packages-microsoft-prod.deb
+# sudo apt-get update
+# sudo apt-get install -y powershell
 
 # Chrome
 curl -L https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb > ~/Downloads/chrome.deb
 sudo apt install ~/Downloads/chrome.deb -y
 
-#Webex Teams
+# SQL Server
+wget -q -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft.gpg > /dev/null 2>&1
+echo "deb [signed-by=/usr/share/keyrings/microsoft.gpg arch=amd64,armhf,arm64] https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 jammy main" | sudo tee /etc/apt/sources.list.d/mssql-server-2022.list
+sudo apt update
+sudo apt install mssql-server -y
+# sudo /opt/mssql/bin/mssql-conf setup
+
+# Azure Data Studio
+curl -L https://go.microsoft.com/fwlink/?linkid=2275602 > ~/Downloads/azure-data-studio.deb
+sudo apt install ~/Downloads/azure-data-studio.deb -y
+curl -L https://raw.githubusercontent.com/jeffwilson515/penguin/main/argv.json > ~/.azuredatastudio/argv.json
+
+# Webex Teams
 mkdir -p ~/.local/share
 # curl -L https://binaries.webex.com/WebexDesktop-Ubuntu-Official-Package/Webex.deb > ~/Downloads/Webex.deb
 # sudo apt install ~/Downloads/Webex.deb -y
-
-# Gnome Keyring
-sudo apt install gnome-keyring -y
-
 
 #Upgate everything
 sudo apt-file update
