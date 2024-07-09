@@ -32,8 +32,12 @@ sudo apt install ~/Downloads/chrome.deb -y
 
 #Webex Teams
 mkdir -p ~/.local/share
-curl -L https://binaries.webex.com/WebexDesktop-Ubuntu-Official-Package/Webex.deb > ~/Downloads/Webex.deb
-sudo apt install ~/Downloads/Webex.deb -y
+# curl -L https://binaries.webex.com/WebexDesktop-Ubuntu-Official-Package/Webex.deb > ~/Downloads/Webex.deb
+# sudo apt install ~/Downloads/Webex.deb -y
+
+# Gnome Keyring
+sudo apt install gnome-keyring -y
+
 
 #Upgate everything
 sudo apt-file update
