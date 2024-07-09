@@ -22,12 +22,11 @@ curl -L https://go.microsoft.com/fwlink/?LinkID=760868 > ~/Downloads/vscode.deb
 sudo apt install ~/Downloads/vscode.deb -y
 
 #PowerShell
-#source /etc/os-release
-#curl -L https://packages.microsoft.com/config/debian/$VERSION_ID/packages-microsoft-prod.deb > ~/Downloads/packages-microsoft-prod.deb
-#sudo dpkg -i packages-microsoft-prod.deb
-#rm packages-microsoft-prod.deb
-#sudo apt update
-#sudo apt install powershell -y
+source /etc/os-release
+curl -L https://packages.microsoft.com/config/debian/$VERSION_ID/packages-microsoft-prod.deb > ~/Downloads/packages-microsoft-prod.deb
+sudo dpkg -i ~/Downloads/packages-microsoft-prod.deb
+rm ~/Downloads/packages-microsoft-prod.deb
+sudo apt install powershell -y
 
 # Chrome
 curl -L https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb > ~/Downloads/chrome.deb
@@ -37,8 +36,6 @@ sudo apt install ~/Downloads/chrome.deb
 mkdir -p ~/.local/share
 curl -L https://binaries.webex.com/WebexDesktop-Ubuntu-Official-Package/Webex.deb > ~/Downloads/Webex.deb
 sudo apt install ~/Downloads/Webex.deb -y
-
-
 
 #Upgrade everything
 # sudo apt update
