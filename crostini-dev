@@ -16,7 +16,7 @@ sudo apt install gnupg2 -y
 sudo apt install apt-transport-https -y
 
 # Gnome Keyring
-sudo apt install gnome-keyring -y
+# sudo apt install gnome-keyring -y
 
 # VS Code
 curl -L https://go.microsoft.com/fwlink/?LinkID=760868 > ~/Downloads/vscode.deb
