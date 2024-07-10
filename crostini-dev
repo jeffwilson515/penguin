@@ -48,6 +48,11 @@ echo "deb [signed-by=/usr/share/keyrings/microsoft.gpg arch=amd64,armhf,arm64] h
 sudo apt update
 sudo apt install mssql-server -y
 
+# MS SQL ODBC Driver 18
+curl https://packages.microsoft.com/config/debian/12/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+sudo apt-get update
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
+
 #Upgate everything
 sudo apt-file update
 sudo apt update
