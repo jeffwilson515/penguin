@@ -21,6 +21,7 @@ sudo apt install apt-transport-https -y
 # VS Code
 curl -L https://go.microsoft.com/fwlink/?LinkID=760868 > ~/Downloads/vscode.deb
 sudo apt install ~/Downloads/vscode.deb -y
+mkdir -p ~/.vscode
 curl -L https://raw.githubusercontent.com/jeffwilson515/penguin/main/argv.json > ~/.vscode/argv.json
 
 # PowerShell (not working)
@@ -45,6 +46,7 @@ sudo apt install mssql-server -y
 # Azure Data Studio
 curl -L https://go.microsoft.com/fwlink/?linkid=2275602 > ~/Downloads/azure-data-studio.deb
 sudo apt install ~/Downloads/azure-data-studio.deb -y
+mkdir -p ~/.azuredatastudio
 curl -L https://raw.githubusercontent.com/jeffwilson515/penguin/main/argv.json > ~/.azuredatastudio/argv.json
 
 # Webex Teams
