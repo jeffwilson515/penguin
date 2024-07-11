@@ -3,6 +3,7 @@
 
 # Downloads where we put stuff
 cd ~
+mkdir -. ~/dev
 mkdir -p ~/Downloads
 cd ~/Downloads
 
