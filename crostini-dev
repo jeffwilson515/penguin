@@ -26,7 +26,7 @@ mkdir -p ~/.vscode
 curl -L https://raw.githubusercontent.com/jeffwilson515/penguin/main/argv.json > ~/.vscode/argv.json
 
 # Azure Data Studio
-curl -L https://go.microsoft.com/fwlink/?linkid=2275602 > ~/Downloads/azure-data-studio.deb
+curl -L https://go.microsoft.com/fwlink/?linkid=2282287 > ~/Downloads/azure-data-studio.deb
 sudo apt install ~/Downloads/azure-data-studio.deb -y
 mkdir -p ~/.azuredatastudio
 curl -L https://raw.githubusercontent.com/jeffwilson515/penguin/main/argv.json > ~/.azuredatastudio/argv.json
