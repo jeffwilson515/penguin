@@ -40,7 +40,7 @@ curl -L https://raw.githubusercontent.com/jeffwilson515/penguin/main/argv.json >
 # sudo apt-get install -y powershell
 
 #FireFox
-sudo apt install -y firefox-esr
+sudo apt install firefox-esr -y
 
 # SQL Server
 curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
