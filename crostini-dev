@@ -39,8 +39,8 @@ curl -L https://raw.githubusercontent.com/jeffwilson515/penguin/main/argv.json >
 # sudo apt-get update
 # sudo apt-get install -y powershell
 
-# Chromium
-sudo apt install chromium -y
+#FireFox
+sudo apt install -y firefox-esr
 
 # SQL Server
 curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
