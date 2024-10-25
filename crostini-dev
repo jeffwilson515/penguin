@@ -12,6 +12,7 @@ sudo apt install iputils-ping -y
 sudo apt install traceroute -y
 sudo apt install dnsutils -y
 sudo apt install apt-file -y
+sudo apt install tree -y
 # following needed for sql server
 sudo apt install gnupg2 -y
 sudo apt install apt-transport-https -y
